@@ -1,0 +1,135 @@
+<%- include ../parts/header.ejs %>
+<%- include ../parts/navbar.ejs %>
+<%- include ../parts/sidebar.ejs %>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Rekam Medis <%= rekammedis.pasien.nama %></h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="/rekammedis/<%= rekammedis.pasien._id %>">Rekam Medis</a></li>
+                <li class="breadcrumb-item active">Rekam Medis <%= rekammedis.pasien.nama %></li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <!-- /.card-header -->
+              <div class="card-body">
+                <form class="form-horizontal">
+                    <div class="card card-secondary">
+                        <div class="card-header">
+                          <h3 class="card-title">Data Identitas Pasien</h3>
+                        </div>
+                        <div class="card-body">
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">NIK</label>
+                            <div class="col-sm-10">
+                            <input type="number" class="form-control" value="<%= rekammedis.pasien.nik %>" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Nama</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" value="<%= rekammedis.pasien.nama %>" disabled>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- /.card-body --> 
+                    </div>
+                    <div class="card card-secondary">
+                        <div class="card-header">
+                          <h3 class="card-title">Rekam Medis</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Rumah Sakit</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" value="<%= rekammedis.rumah_sakit.nama %>" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Tanggal</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control" value="<%= rekammedis.tanggal.toLocaleDateString('id-ID') %>" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Tanggal Keluar</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control" value="<%= rekammedis.tanggal_keluar.toLocaleDateString('id-ID') %>" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Diagnosis</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" rows="4" value="<%= rekammedis.diagnosis %>" disabled><%= rekammedis.diagnosis %></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Hasil Pemeriksaan Fisik</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" rows="4" value="<%= rekammedis.hasil_pemeriksaan_fisik %>" disabled><%= rekammedis.hasil_pemeriksaan_fisik %></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Hasil Pemeriksaan Penunjang</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" rows="4" value="<%= rekammedis.hasil_pemeriksaan_penunjang %>" disabled><%= rekammedis.hasil_pemeriksaan_penunjang %></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Diagnosis Akhir</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" rows="4" value="<%= rekammedis.diagnosis_akhir %>" disabled><%= rekammedis.diagnosis_akhir %></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Pengobatan dan Tindakan</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" rows="4" value="<%= rekammedis.pengobatan_tindakan %>" disabled><%= rekammedis.pengobatan_tindakan %></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Tindak Lanjut</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" rows="4" value="<%= rekammedis.tindak_lanjut %>" disabled><%= rekammedis.tindak_lanjut %></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Dokter</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control" value="<%= rekammedis.dokter %>" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body --> 
+                    </div>
+                    <!-- /.card-footer -->
+                  </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+ <%- include ../parts/footer.ejs %>
+ <%- include ../parts/js.ejs %>

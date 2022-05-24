@@ -1,0 +1,161 @@
+<%- include ../parts/header.ejs %>
+<%- include ../parts/navbar.ejs %>
+<%- include ../parts/sidebar.ejs %>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Tambah Pasien</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="/pasien">Pasien</a></li>
+                <li class="breadcrumb-item active">Tambah Pasien</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <!-- /.card-header -->
+              <div class="card-body">
+                <form class="form-horizontal" action="/pasien/create" method="post" >
+                    <div class="card card-secondary">
+                        <div class="card-header">
+                          <h3 class="card-title">Data Identitas Pasien</h3>
+                        </div>
+                        <div class="card-body">
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">NIK</label>
+                            <div class="col-sm-10">
+                            <input type="number" class="form-control" placeholder="NIK" name="nik">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Nama</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Nama" name="nama">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Alamat</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Alamat" name="alamat">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Kelurahan</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Kelurahan" name="kelurahan">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Kecamatan</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Kecamatan" name="kecamatan">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Kabupaten</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Kabupaten" name="kabupaten">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Provinsi</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Provinsi" name="provinsi">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">No HP</label>
+                            <div class="col-sm-10">
+                            <input type="tel" class="form-control" placeholder="No HP" name="no_hp">
+                            </div>
+                        </div>
+                        </div>
+                        <!-- /.card-body --> 
+                    </div>
+                    <div class="card card-secondary">
+                        <div class="card-header">
+                          <h3 class="card-title">Kontak Pasien</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Nama</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Nama" name="kontakNama">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Hubungan</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Hubungan" name="hubungan">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Alamat</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Alamat" name="kontakAlamat">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Kelurahan</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Kelurahan" name="kontakKelurahan">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Kecamatan</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Kecamatan" name="kontakKecamatan">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Kabupaten</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Kabupaten" name="kontakKabupaten">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">Provinsi</label>
+                                <div class="col-sm-10">
+                                <input type="text" class="form-control" placeholder="Provinsi" name="kontakProvinsi">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">No HP</label>
+                                <div class="col-sm-10">
+                                <input type="tel" class="form-control" placeholder="No HP" name="kontakNoHp">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body --> 
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary float-right">Submit</button>
+                    </div>
+                    <!-- /.card-footer -->
+                  </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+ <%- include ../parts/footer.ejs %>
+ <%- include ../parts/js.ejs %>
