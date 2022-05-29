@@ -13,13 +13,13 @@
             <tr>
                 <td><%= i+1 %></td>
                 <td><%= rekammedis[i]?.rumah_sakit?.nama %></td>
-                <td><%= rekammedis[i].tanggal.toLocaleDateString('id-ID') %></td>
-                <td><%= rekammedis[i].diagnosis %></td>
+                <td><%= rekammedis[i]?.tanggal.toLocaleDateString('id-ID') %></td>
+                <td><%= rekammedis[i]?.diagnosis %></td>
                 <td>
-                    <a href="/rekammedis/view/<%= rekammedis[i]._id %>" class="btn btn-primary btn-sm mr-1">
+                    <a href="/rekammedis/view/<%= rekammedis[i]?._id %>" class="btn btn-primary btn-sm mr-1">
                         <i class="fas fa-eye mr-1"></i> Lihat
                     </a>
-                    <a href="/rekammedis/edit/<%= rekammedis[i]._id %>" class="btn btn-info btn-sm">
+                    <a href="/rekammedis/edit/<%= rekammedis[i]?._id %>" class="btn btn-info btn-sm">
                         <i class="fas fa-pen mr-1"></i> Edit
                     </a>
                 </td>
