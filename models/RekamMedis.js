@@ -1,12 +1,34 @@
 const mongoose = require('mongoose')
 let rekamMedisSchema = mongoose.Schema({
-    pasien : {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Pasien'
+    rm_id : {
+        type: String
     },
     rumah_sakit : {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'RumahSakit'
+        type: String
+    },
+    pasien : {
+        nik : String,
+        nama : String,
+        jenis_kelamin : String,
+        alamat : {
+            alamat : String,
+            kelurahan : String,
+            kecamatan : String,
+            kabupaten : String,
+            provinsi : String
+        }
+    },
+    kontak : {
+        nama : String,
+        hubungan : String,
+        no_hp : String,
+        alamat : {
+            alamat : String,
+            kelurahan : String,
+            kecamatan : String,
+            kabupaten : String,
+            provinsi : String
+        }
     },
     tanggal : {
         type: Date

@@ -1,13 +1,13 @@
-<%- include ../parts/header.ejs %>
-<%- include ../parts/navbar.ejs %>
-<%- include ../parts/sidebar.ejs %>
+<%- include ('../parts/header.ejs') %>
+<%- include ('../parts/navbar.ejs') %>
+<%- include ('../parts/sidebar.ejs') %>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Rekam Medis Pasien <%= pasien?.nama %></h1>
+            <h1>Rekam Medis Pasien</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -24,15 +24,9 @@
         <div class="row">
           <div class="col-12">
             <div class="card">
-              <div class="card-header">
-                <a href="/rekammedis/create/<%= pasien._id %>" class="btn btn-primary">
-                    <i class="fa fa-plus" aria-hidden="true"></i>
-                    Tambah Rekam Medis
-                </a>
-              </div>
               <!-- /.card-header -->
               <div class="card-body">
-                  <%- include ./table.ejs %>
+                  <%- include ('./table.ejs') %>
               </div>
               <!-- /.card-body -->
             </div>
@@ -45,5 +39,5 @@
     </section>
     <!-- /.content -->
   </div>
- <%- include ../parts/footer.ejs %>
- <%- include ../parts/js.ejs %>
+ <%- include ('../parts/footer.ejs') %>
+ <%- include ('../parts/js.ejs') %>

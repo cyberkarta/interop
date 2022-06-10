@@ -1,6 +1,6 @@
-<%- include ../parts/header.ejs %>
-<%- include ../parts/navbar.ejs %>
-<%- include ../parts/sidebar.ejs %>
+<%- include ('../parts/header.ejs') %>
+<%- include ('../parts/navbar.ejs') %>
+<%- include ('../parts/sidebar.ejs') %>
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -28,6 +28,20 @@
               <!-- /.card-header -->
               <div class="card-body">
                 <form class="form-horizontal">
+                  <div class="card card-secondary">
+                    <div class="card-header">
+                      <h3 class="card-title">Rumah Sakit</h3>
+                    </div>
+                    <div class="card-body">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Rumah Sakit</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" value="<%= rekammedis.rumah_sakit %>" disabled>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- /.card-body --> 
+                  </div>
                     <div class="card card-secondary">
                         <div class="card-header">
                           <h3 class="card-title">Data Identitas Pasien</h3>
@@ -49,16 +63,66 @@
                         <!-- /.card-body --> 
                     </div>
                     <div class="card card-secondary">
+                      <div class="card-header">
+                        <h3 class="card-title">Kontak Pasien</h3>
+                      </div>
+                      <div class="card-body">
+                          <div class="form-group row">
+                              <label for="inputPassword3" class="col-sm-2 col-form-label">Nama</label>
+                              <div class="col-sm-10">
+                              <input type="text" class="form-control" value="<%= rekammedis?.kontak?.nama %>" disabled>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <label for="inputEmail3" class="col-sm-2 col-form-label">Hubungan</label>
+                              <div class="col-sm-10">
+                              <input type="text" class="form-control" value="<%= rekammedis?.kontak?.hubungan %>" disabled>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <label for="inputPassword3" class="col-sm-2 col-form-label">Alamat</label>
+                              <div class="col-sm-10">
+                              <input type="text" class="form-control" value="<%= rekammedis?.kontak?.alamat?.alamat %>" disabled>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <label for="inputPassword3" class="col-sm-2 col-form-label">Kelurahan</label>
+                              <div class="col-sm-10">
+                              <input type="text" class="form-control" value="<%= rekammedis?.kontak?.alamat?.kelurahan %>" disabled>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <label for="inputPassword3" class="col-sm-2 col-form-label">Kecamatan</label>
+                              <div class="col-sm-10">
+                              <input type="text" class="form-control" value="<%= rekammedis?.kontak?.alamat?.kecamatan %>" disabled>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <label for="inputPassword3" class="col-sm-2 col-form-label">Kabupaten</label>
+                              <div class="col-sm-10">
+                              <input type="text" class="form-control" value="<%= rekammedis?.kontak?.alamat?.kabupaten %>" disabled>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <label for="inputPassword3" class="col-sm-2 col-form-label">Provinsi</label>
+                              <div class="col-sm-10">
+                              <input type="text" class="form-control" value="<%= rekammedis?.kontak?.alamat?.provinsi %>" disabled>
+                              </div>
+                          </div>
+                          <div class="form-group row">
+                              <label for="inputPassword3" class="col-sm-2 col-form-label">No HP</label>
+                              <div class="col-sm-10">
+                              <input type="tel" class="form-control" value="<%= rekammedis?.kontak?.no_hp %>" disabled>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- /.card-body --> 
+                    </div>
+                    <div class="card card-secondary">
                         <div class="card-header">
                           <h3 class="card-title">Rekam Medis</h3>
                         </div>
                         <div class="card-body">
-                            <div class="form-group row">
-                                <label for="inputPassword3" class="col-sm-2 col-form-label">Rumah Sakit</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" value="<%= rekammedis.rumah_sakit.nama %>" disabled>
-                                </div>
-                            </div>
                             <div class="form-group row">
                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Tanggal</label>
                                 <div class="col-sm-10">
@@ -131,5 +195,5 @@
     </section>
     <!-- /.content -->
   </div>
- <%- include ../parts/footer.ejs %>
- <%- include ../parts/js.ejs %>
+ <%- include ('../parts/footer.ejs') %>
+ <%- include ('../parts/js.ejs') %>

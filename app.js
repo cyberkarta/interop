@@ -7,9 +7,8 @@ const methodOverride = require('method-override')
 const session = require('express-session');
 
 const indexRouter = require('./app/user/router');
-const pasienRouter = require('./app/pasien/router');
-const rsRouter = require('./app/rumahSakit/router')
-const rekamRouter = require('./app/rekamMedis/router')
+const apiRouter = require('./app/api/router');
+const rekamRouter = require('./app/rekamMedis/router');
 
 var app = express();
 
@@ -31,9 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/adminlte',express.static(path.join(__dirname,'/node_modules/admin-lte/')))
 
 app.use('/', indexRouter);
-app.use('/pasien', pasienRouter);
-app.use('/rumahsakit', rsRouter);
-app.use('/rekammedis',rekamRouter)
+app.use('/api',apiRouter);
+app.use('/rekammedis',rekamRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
